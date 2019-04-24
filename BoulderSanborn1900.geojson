@@ -4,7 +4,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 2
+        "Plate": 2,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53902~126354"
       },
       "geometry": {
         "type": "Polygon",
@@ -57,7 +59,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 5
+        "Plate": 5,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53962~126357"
       },
       "geometry": {
         "type": "Polygon",
@@ -94,7 +98,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 6
+        "Plate": 6,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53982~126358"
       },
       "geometry": {
         "type": "Polygon",
@@ -127,7 +133,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 7
+        "Plate": 7,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54002~126359"
       },
       "geometry": {
         "type": "Polygon",
@@ -160,7 +168,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 8
+        "Plate": 8,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54022~126360"
       },
       "geometry": {
         "type": "Polygon",
@@ -193,7 +203,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 11
+        "Plate": 11,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54082~126363"
       },
       "geometry": {
         "type": "Polygon",
@@ -234,7 +246,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 10
+        "Plate": 10,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54062~126362"
       },
       "geometry": {
         "type": "Polygon",
@@ -267,7 +281,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 9
+        "Plate": 9,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54042~126361"
       },
       "geometry": {
         "type": "Polygon",
@@ -308,7 +324,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 3
+        "Plate": 3,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53922~126355"
       },
       "geometry": {
         "type": "Polygon",
@@ -349,7 +367,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 4
+        "Plate": 4,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53942~126356"
       },
       "geometry": {
         "type": "Polygon",
@@ -390,7 +410,9 @@
     {
       "type": "Feature",
       "properties": {
-        "Plate": 3
+        "Plate": 3,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53922~126355"
       },
       "geometry": {
         "type": "Polygon",
@@ -415,6 +437,290 @@
             [
               -105.28482288122177,
               40.020183166831636
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 3,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53922~126355"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.29124140739441,
+              40.01369606169328
+            ],
+            [
+              -105.29010951519011,
+              40.01360978191558
+            ],
+            [
+              -105.29028654098511,
+              40.014098699213775
+            ],
+            [
+              -105.29132723808289,
+              40.013876838016735
+            ],
+            [
+              -105.29124140739441,
+              40.01369606169328
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 3,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~53922~126355"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.28337448835373,
+              40.01315783844072
+            ],
+            [
+              -105.2834630012512,
+              40.01341257058549
+            ],
+            [
+              -105.2834764122963,
+              40.013539936301335
+            ],
+            [
+              -105.28396457433699,
+              40.01344543918009
+            ],
+            [
+              -105.28381705284119,
+              40.01306334079041
+            ],
+            [
+              -105.28337448835373,
+              40.01315783844072
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 14,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54142~126366"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.2806305885315,
+              40.0137042788093
+            ],
+            [
+              -105.28225064277649,
+              40.01339202770582
+            ],
+            [
+              -105.28180807828903,
+              40.01214917198346
+            ],
+            [
+              -105.28020143508911,
+              40.01247991761711
+            ],
+            [
+              -105.2806305885315,
+              40.0137042788093
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 14,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54142~126366"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.27814149856567,
+              40.01455063645834
+            ],
+            [
+              -105.27927875518799,
+              40.014304125605044
+            ],
+            [
+              -105.27883887290955,
+              40.012997603217386
+            ],
+            [
+              -105.27766942977905,
+              40.013260553129626
+            ],
+            [
+              -105.27814149856567,
+              40.01455063645834
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 14,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54142~126366"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.29049575328827,
+              40.01571744241553
+            ],
+            [
+              -105.28987884521484,
+              40.01404528825079
+            ],
+            [
+              -105.28858602046967,
+              40.01430823412655
+            ],
+            [
+              -105.28917878866196,
+              40.01599681552966
+            ],
+            [
+              -105.29049575328827,
+              40.01571744241553
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 14,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54142~126366"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.2934193611145,
+              40.01564759895828
+            ],
+            [
+              -105.29459148645401,
+              40.01540520052276
+            ],
+            [
+              -105.29415965080261,
+              40.01416443572628
+            ],
+            [
+              -105.29299557209015,
+              40.014402730053206
+            ],
+            [
+              -105.2934193611145,
+              40.01564759895828
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 12,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54102~126364"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.27868330478668,
+              40.01050774602546
+            ],
+            [
+              -105.27867794036865,
+              40.007294627765994
+            ],
+            [
+              -105.27085661888123,
+              40.00730284565267
+            ],
+            [
+              -105.27087807655334,
+              40.01054061601894
+            ],
+            [
+              -105.27868330478668,
+              40.01050774602546
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Plate": 13,
+        "Atlas": "Sanborn Fire Insurance Maps, Boulder, CO, 1900",
+        "url": "https://cudl.colorado.edu/luna/servlet/workspace/handleMediaPlayer?lunaMediaId=UCBOULDERCB1~21~21~54122~126365"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -105.27934312820435,
+              39.9991502158116
+            ],
+            [
+              -105.28334498405457,
+              39.99912555920457
+            ],
+            [
+              -105.28326988220215,
+              39.994876270953284
+            ],
+            [
+              -105.27928948402405,
+              39.99490092909462
+            ],
+            [
+              -105.27934312820435,
+              39.9991502158116
             ]
           ]
         ]
