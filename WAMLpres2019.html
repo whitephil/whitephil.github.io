@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/philstyle.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1 style="text-align: left; ">Fun in the Library with Mapbox</h1><br><br>
+            <div style="text-align: right;">
+              <p><strong>Phil White</strong></p>
+              <p>University of Colorado <span style="color:#CFB87C;"><strong>Boulder</strong></span></p>
+            </div>
+        </section>
+
+        <section>
+          <h2  style="text-align: left; ">What is <a href = "https://www.mapbox.com/" target="_blank">Mapbox</a>?</h2>
+            <li style="text-align: left; ">JavaScript webmapping platform</li>
+            <li style="text-align: left; ">Free-ish</li>
+            <li style="text-align: left; ">Highly customizable and fun!</li>
+        </section>
+
+        <section>
+          <h2  style="text-align: left; ">Why use Mapbox?</h2>
+            <div style= "text-align: left;">
+              <li><a href = "https://docs.mapbox.com/mapbox-gl-js/api/" target="_blank">Mapbox GL JS</a> is cutting edge</li>
+              <li>WebGL rendering, vector tiles</li>
+              <li>People want to use it</li>
+              <li>Ubiquitous (except... Google)</li>
+              <li>Faster, greater functionality than Leaflet</li>
+            </div>
+        </section>
+
+        <section>
+          <h2>2 fun projects worth sharing</h2>
+            <ol>
+  						<li class="fragment">Creating Sanborn webmap indexes using Mapbox, GitHub</li><br>
+  						<li class="fragment">DH web mapping project collab w/ Art professor</li>
+  					</ol>
+        </section>
+
+        <section> <!-- vertical section -->
+
+          <section data-background="img/den90un1.jpg">
+            <div class = "transbox">
+              <h2>Sanborn Indexes using Mapbox & GitHub</h2>
+            </div>
+          </section>
+
+          <section>
+            <p>Full attribution to Evan Thornberry of UBC! Check out his <a href= "https://s3.amazonaws.com/ect123/ica/presentation.html#/" target="_blank">presentation</a> on developing this workflow.</p><br>
+            <p class = "fragment">Objective: make our scanned Sanborns easier to find... for free!</p><br>
+            <p class="fragment">I followed Evan's method with an update from Leaflet to Mapbox GL JS.</p><br>
+          </section>
+
+          <section>
+            <ol>
+              <li>Heads up digitize new layers based on Sanborn index/keymap pages as <a href = "http://geojson.io" target="_blank">GeoJson</a></li><br>
+              <li>Store layers in <a href = "https://github.com/outpw/geodex" target="_blank">GitHub repository</a></li><br>
+              <li>Create a nifty <a href = "https://outpw.s3.us-east-2.amazonaws.com/index+maps/Sanborn_Denver_Index.html" target="_blank">webmap</a> using Mapbox GL JS</li><br>
+              <li>Add layers to webmap straight from GitHub</li><br>
+              <li>Embed someplace (like a <a href ="" target="_blank">libguide</a>)</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>View the code of the webmaps with added GeoJson layers on <a href = "https://github.com/outpw/geodex/tree/master/html%20maps" target="_blank">GitHub</a>!</h3>
+          </section>
+
+        </section><!--End first vertical section-->
+
+        <section><!--Second vertical section-->
+
+          <section data-background="img/A0934-00006.jpg">
+            <div class = "transbox">
+              <h2>Bringing the Philippine Village back to life</h2>
+            </div>
+          </section>
+
+          <section>
+            <p>Art Professor wanted to create an interactive webmap for use on mobile device depicting historical map of 1904 St. Louis World's Fair.</p><br>
+            <p class="fragment">Started as a straightforward GIS consultation on georeferencing...</p><br>
+            <p class="fragment">Quickly realized more conventional approaches wouldn't meet her needs.</p>
+          </section>
+
+          <section>
+            <h3>Objective: build a mobile webmap with geolocation services, geocoding, toggle-able basemaps<h3>
+          </section>
+
+          <section style="text-align: left; list-style-position: inside; text-indent: -1.25em;">
+            <p>Good news! This is easy and free* with Mapbox!</p>
+              <div style = "margin: 50px;">
+              <li>50k free views/month</li>
+              <li>100k free geocoding requests/month</li>
+              <li>Image overlay only requires corner XYs</li>
+              <li>Adding these elements was easy because documentation is excellent!</li></div>
+          </section>
+
+          <section>
+            <p>View the map with your phone or browser!</p><br>
+            <p>Check out the code for desktop and mobile!</p>
+          </section>
+
+        </section>
+
+        <section>
+          <h3>All that code looks scary!</h3><br>
+          <p class = "fragment">Do what I did...
+            <span style="display: inline-block;" class="fragment fade-left">steal it,</span>
+            <span style="display: inline-block;" class="fragment fade-left"> adapt and improvise,</span>
+            <span style="display: inline-block;" class="fragment fade-left"> share!</span></p>
+        </section>
+
+        <section>
+          <h2 style= "text-align: left;">Thank you!</h2><br>
+          <p><strong>Phil White</strong>, University of Colorado <span style="color:#CFB87C;"><strong>Boulder</strong></span></p>
+          <p>Email: <a href = "mailto:philip.white@colorado.edu">philip.white@colorado.edu</a></p>
+          <p>Slides: something.io</p>
+          <p>Code examples: <a href = "https://github.com/outpw/geodex/">github.com/outpw/geodex</a></p>
+          <p>Mapbox GL JS <a href = "https://docs.mapbox.com/mapbox-gl-js/examples">examples</a></p>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
