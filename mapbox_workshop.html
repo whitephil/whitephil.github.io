@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Mapbox Workshop Backchannel</title>
+  <meta name="description" content="Mapbox workshop backchannel">
+  <meta name="author" content="Phil White">
+
+  <link rel="stylesheet" href="css/theme/spookystyle.css?v=1.0">
+
+</head>
+
+<body>
+  <h1>Mapbox Workshop <span style="color:orange">Spooky </span>Backchannel</h1>
+    <p style="color:orange">presented by:</p>
+
+  <h3>Alicia Cowart & Phil White</h3>
+    <p><span style="color:orange">Email us at: </span><a href="mailto:alicia.cowart@colorado.edu">Alicia.Cowart@Colorado.EDU</a> & <a href="mailto:philip.white@colorado.edu">Philip.White@Colorado.EDU</a></p>
+
+  <h3>Links</h3>
+    <ul>
+      <li><a href="https://docs.google.com/presentation/d/1uh0jufTZ_D0n2X_RHfOLxMbU_wS07T1pFgyLV1ZJ4pA/edit?usp=sharing" target="_blank">Follow the Slides</a></li>
+      <li><a href="https://github.com/outpw/workshopdata/raw/master/Mapbox_Stuff.zip" target="_blank">Download the Workshop Materials</a></li>
+      <li><a href="https://www.mapbox.com/" target="_blank">Mapbox</a></li>
+      <li><a href="https://docs.mapbox.com/mapbox-gl-js/examples/" target="_blank">Mapbox Documentation</a></li>
+    </ul>
+  <h3>JavaScript Snippets for your map:</h3>
+    <p>All of the following sould be inserted within the &lt;script&gt; tag. See comments in the mapbox_starter.html document for where to place each snippet.</p><br>
+    <ol>
+      <li>Start by inserting your access token. You can find this under your Mapbox account information:</li>
+        <pre>
+          <code>mapboxgl.accessToken = 'TOKEN GOES HERE';</code>
+        </pre>
+      <li>Initialize the map. For style, insert the style you created or any of the default <a href="https://docs.mapbox.com/api/maps/#styles" target="_blank">Mapbox Styles</a>:</li>
+        <pre>
+          <code>
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/your_style',
+  zoom: 6.75,
+  center: [-105.547222, 39.0]
+});
+          </code>
+        </pre>
+      <li>Add navigation controls:</li>
+        <pre>
+          <code>map.addControl(new mapboxgl.NavigationControl(), 'top-left');</code>
+        </pre>
+      <li>Add a GeoJSON layer from the web. Note that we're styling here as plain red circles:</li>
+        <pre>
+          <code>
+map.on('load', function () {
+
+  map.addSource('CO_GhostTowns', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/outpw/workshopdata/master/Colorado_Ghost_Towns.geojson'
+  });
+
+  map.addLayer({
+    'id': 'Ghost Towns',
+    'type': 'circle',
+    'source': 'CO_GhostTowns',
+    'paint': {
+      'circle-radius': 6,
+      'circle-color': '#B42222'
+    },
+  });
+});
+          </code>
+        </pre>
+      <li>This time, we'll change the icons to our skull & crossbones. Replace the map.addLayer function with the following:</li>
+        <pre>
+          <code>
+  map.addLayer({
+    'id': 'Ghost Towns',
+    'type': 'symbol',
+    'source': 'CO_GhostTowns',
+    'layout': {
+      'icon-image': 'orange_danger-15',
+    },
+          </code>
+        </pre>
+      <li>Now we will work on interactivity. We'll start with mouseover effects:</li>
+        <pre>
+          <code>
+map.on('mousemove', 'Ghost Towns', function () {
+  map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('mouseleave', 'Ghost Towns', function () {
+  map.getCanvas().style.cursor = '';
+});
+          </code>
+        </pre>
+      <li>Next, we'll create a pop up. This code pulls data out of the GeoJSON layer to display in the pop up:</li>
+        <pre>
+          <code>
+map.on('click', 'Ghost Towns', function (e) {
+
+  new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('&lt;h3&gt;' + e.features[0].properties.Name + '&lt;/h3&gt;&lt;p&gt;' + e.features[0].properties.description +'&lt;/p&gt;')
+  .addTo(map);
+});
+          </code>
+        </pre>
+    </ol>
+  <h2>Nice job! You take it from here!</h2>
+</body>
+</html>
