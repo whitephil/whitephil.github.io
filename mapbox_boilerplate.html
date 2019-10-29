@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!--Mapbox GL JS boiler plate-->
+
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapbox Basic Boilerplate</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+
+
+//**********************************************
+//Your access token
+//**********************************************
+mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFyeGU5bjFodnoifQ.rTatk-sWYhNaoRAc5Rfhjw';
+
+
+//**********************************************
+//Create the map, specify the Mapbox style or a custom style created in Mapbox Studio, set zoom level and location
+//**********************************************
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/philwhite/ck2c1260e02dm1cqnea0rzdth',
+    zoom: 6.75,
+    center: [-105.547222, 39.0]
+});
+
+
+//**********************************************
+//Add nav controls, places at top left
+//**********************************************
+map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+
+//**********************************************
+//Add a geojson layer to the map
+//**********************************************
+map.on('load', function () {
+
+  map.addSource('CO_GhostTowns', {
+      type: 'geojson',
+      data: 'https://raw.githubusercontent.com/outpw/workshopdata/master/Colorado_Ghost_Towns.geojson'
+  });
+
+  map.addLayer({
+    'id': 'Ghost Towns',
+    'type': 'symbol',
+    'source': 'CO_GhostTowns',
+    'layout': {
+      'icon-image': 'orange_danger-15',
+    },
+  });
+
+
+/*
+  map.addLayer({
+    'id': 'Ghost Towns',
+    'type': 'circle',
+    'source': 'CO_GhostTowns',
+    'paint': {
+      'circle-radius': 6,
+      'circle-color': '#B42222'
+    },
+  });
+*/
+
+});
+
+//**********************************************
+//Change the cursor to a pointer when the mouse is over the layer.
+//**********************************************
+map.on('mousemove', 'Ghost Towns', function () {
+  map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'Ghost Towns', function () {
+  map.getCanvas().style.cursor = '';
+});
+
+//**********************************************
+// When a click event occurs on a feature in the index layers, open a popup at the
+// location of the click, with description HTML from its properties.
+//**********************************************
+map.on('click', 'Ghost Towns', function (e) {
+
+  new mapboxgl.Popup()
+  .setLngLat(e.lngLat)
+  .setHTML('<h3>' + e.features[0].properties.Name + '</h3><p>' + e.features[0].properties.description +'</p>')
+  .addTo(map);
+});
+
+
+</script>
+
+</body>
+</html>
