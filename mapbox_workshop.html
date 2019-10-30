@@ -30,11 +30,11 @@
   <h3>JavaScript Snippets for your map:</h3>
     <p>All of the following sould be inserted within the &lt;script&gt; tag. See comments in the mapbox_starter.html document for where to place each snippet.</p><br>
     <ol>
-      <li style="line-height: 10px;">Start by inserting your access token. You can find this under your Mapbox account information:</li>
+      <li style="line-height: 30px">Start by inserting your access token. You can find this under your Mapbox account information:</li>
         <pre>
           <code>mapboxgl.accessToken = 'TOKEN GOES HERE';</code>
         </pre>
-      <li style="line-height: 10px;">Initialize the map. For style, insert the style you created or any of the default <a href="https://docs.mapbox.com/api/maps/#styles" target="_blank">Mapbox Styles</a>:</li>
+      <li style="line-height: 30px">Initialize the map. For style, insert the style you created or any of the default <a href="https://docs.mapbox.com/api/maps/#styles" target="_blank">Mapbox Styles</a>:</li>
         <pre>
           <code>
 var map = new mapboxgl.Map({
@@ -49,7 +49,7 @@ var map = new mapboxgl.Map({
         <pre>
           <code>map.addControl(new mapboxgl.NavigationControl(), 'top-left');</code>
         </pre>
-      <li style="line-height: 10px;">Add a GeoJSON layer from the web. Note that we're styling here as plain red circles:</li>
+      <li style="line-height: 30px">Add a GeoJSON layer from the web. Note that we're styling here as plain red circles:</li>
         <pre>
           <code>
 map.on('load', function () {
@@ -71,7 +71,7 @@ map.on('load', function () {
 });
           </code>
         </pre>
-      <li style="line-height: 10px;">This time, we'll change the icons to our skull & crossbones. Replace the map.addLayer function with the following:</li>
+      <li style="line-height: 30px">This time, we'll change the icons to our skull & crossbones. Replace the map.addLayer function with the following:</li>
         <pre>
           <code>
   map.addLayer({
@@ -83,7 +83,7 @@ map.on('load', function () {
     },
           </code>
         </pre>
-      <li>Now we will work on interactivity. We'll start with mouseover effects:</li>
+      <li style="line-height: 30px">Now we will work on interactivity. We'll start with mouseover effects:</li>
         <pre>
           <code>
 map.on('mousemove', 'Ghost Towns', function () {
@@ -95,7 +95,7 @@ map.on('mouseleave', 'Ghost Towns', function () {
 });
           </code>
         </pre>
-      <li style="line-height: 10px;">Next, we'll create a pop up. This code pulls data out of the GeoJSON layer to display in the pop up:</li>
+      <li style="line-height:30px">Next, we'll create a pop up. This code pulls data out of the GeoJSON layer to display in the pop up:</li>
         <pre>
           <code>
 map.on('click', 'Ghost Towns', function (e) {
