@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>1. Importing Data, Plotting, and changing CRS</title>
+<title>1. Importing Data, Plotting, and changing CRS complete</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13153,7 +13153,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="You-can-import-a-file-using-gpd.read_file()...">You can import a file using gpd.read_file()...<a class="anchor-link" href="#You-can-import-a-file-using-gpd.read_file()...">&#182;</a></h4>
-<pre><code>&gt;&gt;&gt; gpd.read_file('Data/Boulder_Co.shp')</code></pre>
+<pre><code>&gt;&gt;&gt; gpd.read_file('workshopdata/Boulder_Co.shp')</code></pre>
 
 </div>
 </div>
@@ -13163,7 +13163,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Data/Boulder_Co.shp&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;workshopdata/Boulder_Co.shp&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13236,7 +13236,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Create-a-variable-out-of-the-Boulder-County-shapefile:">Create a variable out of the Boulder County shapefile:<a class="anchor-link" href="#Create-a-variable-out-of-the-Boulder-County-shapefile:">&#182;</a></h4>
-<pre><code>&gt;&gt;&gt; county = gpd.read_file('Data/Boulder_Co.shp')</code></pre>
+<pre><code>&gt;&gt;&gt; county = gpd.read_file('workshopata/Boulder_Co.shp')</code></pre>
 
 </div>
 </div>
@@ -13246,7 +13246,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">county</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Data/Boulder_Co.shp&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">county</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;workshopdata/Boulder_Co.shp&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13554,7 +13554,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Pro-tip:-go-to-https://spatialreference.org/-to-check-all-the-different-epsg-codes.">Pro tip: go to <a href="https://spatialreference.org/">https://spatialreference.org/</a> to check all the different epsg codes.<a class="anchor-link" href="#Pro-tip:-go-to-https://spatialreference.org/-to-check-all-the-different-epsg-codes.">&#182;</a></h5><h4 id="Now,-let's-read-in-another-file,-the-Boulder-City-Limits-shapefile:">Now, let's read in another file, the Boulder City Limits shapefile:<a class="anchor-link" href="#Now,-let's-read-in-another-file,-the-Boulder-City-Limits-shapefile:">&#182;</a></h4>
-<pre><code>&gt;&gt;&gt; city = gpd.read_file('Data/City_Limites.shp')
+<pre><code>&gt;&gt;&gt; city = gpd.read_file('workshopdata/City_Limites.shp')
 &gt;&gt;&gt; city</code></pre>
 
 </div>
@@ -13565,7 +13565,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Data/City_Limits.shp&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;workshopdata/City_Limits.shp&#39;</span><span class="p">)</span>
 <span class="n">city</span>
 </pre></div>
 

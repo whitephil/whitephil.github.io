@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>3. Joins & Choropleth Plot</title>
+<title>3. Joins & Choropleth Plot complete</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13118,7 +13118,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../../&#39;</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
 
@@ -13151,7 +13151,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Start-by-importing-the-Boulder_Co_Tracts-shapefile-as-a-variable:">Start by importing the Boulder_Co_Tracts shapefile as a variable:<a class="anchor-link" href="#Start-by-importing-the-Boulder_Co_Tracts-shapefile-as-a-variable:">&#182;</a></h4>
-<pre><code>&gt;&gt;&gt; BoulderTracts = gpd.read_file('Data/Boulder_Co_Tracts.shp')
+<pre><code>&gt;&gt;&gt; BoulderTracts = gpd.read_file('workshopdata/Boulder_Co_Tracts.shp')
 &gt;&gt;&gt; BoulderTracts</code></pre>
 
 </div>
@@ -13407,7 +13407,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Now,-we'll-read-the-Boulder_Co_MHHI-csv-file-into-a-non-spatial-Pandas-dataframe:">Now, we'll read the Boulder_Co_MHHI csv file into a non-spatial Pandas dataframe:<a class="anchor-link" href="#Now,-we'll-read-the-Boulder_Co_MHHI-csv-file-into-a-non-spatial-Pandas-dataframe:">&#182;</a></h4>
-<pre><code>&gt;&gt;&gt; BoulderMHHI = pd.read_csv('Data/Boulder_Co_MHHI.csv')
+<pre><code>&gt;&gt;&gt; BoulderMHHI = pd.read_csv('workshopdata/Boulder_Co_MHHI.csv')
 &gt;&gt;&gt; BoulderMHHI</code></pre>
 
 </div>
@@ -13693,7 +13693,7 @@ Name: GEOID10, Length: 68, dtype: object
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Arrrgh!-Classic-problem.-Stripped-leading-zeros-when-importing-the-csv.">Arrrgh! Classic problem. Stripped leading zeros when importing the csv.<a class="anchor-link" href="#Arrrgh!-Classic-problem.-Stripped-leading-zeros-when-importing-the-csv.">&#182;</a></h3><h4 id="Good-new:-this-is-easy-to-fix.-Reimport-the-BoulderMHHI-csv-and-tell-pandas-to-read-the-GEOID10-column-as-a-string-instead-of-a-number:">Good new: this is easy to fix. Reimport the BoulderMHHI csv and tell pandas to read the GEOID10 column as a string instead of a number:<a class="anchor-link" href="#Good-new:-this-is-easy-to-fix.-Reimport-the-BoulderMHHI-csv-and-tell-pandas-to-read-the-GEOID10-column-as-a-string-instead-of-a-number:">&#182;</a></h4>
-<pre><code>&gt;&gt;&gt; BoulderMHHI = pd.read_csv('Data/Boulder_Co_MHHI.csv', dtype={'GEOID10':str})
+<pre><code>&gt;&gt;&gt; BoulderMHHI = pd.read_csv('workshopdata/Boulder_Co_MHHI.csv', dtype={'GEOID10':str})
 &gt;&gt;&gt; BoulderMHHI</code></pre>
 
 </div>
@@ -14314,7 +14314,7 @@ Name: GEOID10, Length: 68, dtype: object
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff18f10ae80&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb106c369e8&gt;</pre>
 </div>
 
 </div>
@@ -14371,7 +14371,7 @@ Name: GEOID10, Length: 68, dtype: object
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff18ed145f8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fb106839160&gt;</pre>
 </div>
 
 </div>
