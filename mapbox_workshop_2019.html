@@ -8,16 +8,16 @@
   <meta name="description" content="Mapbox workshop backchannel">
   <meta name="author" content="Phil White">
 
-  <link rel="stylesheet" href="css/theme/skistyle.css?v=1.0">
+  <link rel="stylesheet" href="css/theme/spookystyle.css?v=1.0">
 
 </head>
 
 <body>
-  <h1>Mapbox Workshop Backchannel</h1>
-    <p style="color:#FFD700">presented by:</p>
+  <h1>Mapbox Workshop <span style="color:orange">Spooky </span>Backchannel</h1>
+    <p style="color:orange">presented by:</p>
 
   <h3>Alicia Cowart & Phil White</h3>
-    <p><span style="color:#FFD700">Email us at: </span><a href="mailto:alicia.cowart@colorado.edu">Alicia.Cowart@Colorado.EDU</a> & <a href="mailto:philip.white@colorado.edu">Philip.White@Colorado.EDU</a></p>
+    <p><span style="color:orange">Email us at: </span><a href="mailto:alicia.cowart@colorado.edu">Alicia.Cowart@Colorado.EDU</a> & <a href="mailto:philip.white@colorado.edu">Philip.White@Colorado.EDU</a></p>
 
   <h3>Links</h3>
     <ul>
@@ -55,15 +55,15 @@ var map = new mapboxgl.Map({
           <code>
 map.on('load', function () {
 
-  map.addSource('CO_Ski_Areas', {
+  map.addSource('CO_GhostTowns', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/workshopdata/master/Colorado_Ski_Areas.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/workshopdata/master/Colorado_Ghost_Towns.geojson'
   });
 
   map.addLayer({
-    'id': 'Ski Areas',
+    'id': 'Ghost Towns',
     'type': 'circle',
-    'source': 'CO_Ski_Areas',
+    'source': 'CO_GhostTowns',
     'paint': {
       'circle-radius': 6,
       'circle-color': '#B42222'
@@ -76,22 +76,22 @@ map.on('load', function () {
         <pre>
           <code>
   map.addLayer({
-    'id': 'Ski Areas',
+    'id': 'Ghost Towns',
     'type': 'symbol',
-    'source': 'CO_Ski_Areas',
+    'source': 'CO_GhostTowns',
     'layout': {
-      'icon-image': 'ski-bum',
+      'icon-image': 'orange_danger-15',
     },
           </code>
         </pre>
       <li style="line-height: 30px">Now we will work on interactivity. We'll start with mouseover effects:</li>
         <pre>
           <code>
-map.on('mousemove', 'Ski Areas', function () {
+map.on('mousemove', 'Ghost Towns', function () {
   map.getCanvas().style.cursor = 'pointer';
 });
 
-map.on('mouseleave', 'Ski Areas', function () {
+map.on('mouseleave', 'Ghost Towns', function () {
   map.getCanvas().style.cursor = '';
 });
           </code>
@@ -99,7 +99,7 @@ map.on('mouseleave', 'Ski Areas', function () {
       <li style="line-height:30px">Next, we'll create a pop up. This code pulls data out of the GeoJSON layer to display in the pop up:</li>
         <pre>
           <code>
-map.on('click', 'Ski Areas', function (e) {
+map.on('click', 'Ghost Towns', function (e) {
 
   new mapboxgl.Popup()
   .setLngLat(e.lngLat)

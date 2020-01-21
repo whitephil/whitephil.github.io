@@ -31,7 +31,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicGhpbHdoaXRlIiwiYSI6ImNqMDFxcXh5ZjA3ZzkzMnFye
 //**********************************************
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/philwhite/ck5o64gnn1doh1iqncygtw4xy',
+    style: 'mapbox://styles/philwhite/ck2c1260e02dm1cqnea0rzdth',
     zoom: 6.75,
     center: [-105.547222, 39.0]
 });
@@ -48,17 +48,17 @@ map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 //**********************************************
 map.on('load', function () {
 
-  map.addSource('CO_Ski_Areas', {
+  map.addSource('CO_GhostTowns', {
       type: 'geojson',
-      data: 'https://raw.githubusercontent.com/outpw/workshopdata/master/Colorado_Ski_Areas.geojson'
+      data: 'https://raw.githubusercontent.com/outpw/workshopdata/master/Colorado_Ghost_Towns.geojson'
   });
 
   map.addLayer({
-    'id': 'Ski Areas',
+    'id': 'Ghost Towns',
     'type': 'symbol',
-    'source': 'CO_Ski_Areas',
+    'source': 'CO_GhostTowns',
     'layout': {
-      'icon-image': 'ski-bum'
+      'icon-image': 'orange_danger-15',
     },
   });
 
@@ -67,7 +67,7 @@ map.on('load', function () {
   map.addLayer({
     'id': 'Ghost Towns',
     'type': 'circle',
-    'source': 'CO_Ski_Areas',
+    'source': 'CO_GhostTowns',
     'paint': {
       'circle-radius': 6,
       'circle-color': '#B42222'
@@ -80,12 +80,12 @@ map.on('load', function () {
 //**********************************************
 //Change the cursor to a pointer when the mouse is over the layer.
 //**********************************************
-map.on('mousemove', 'Ski Areas', function () {
+map.on('mousemove', 'Ghost Towns', function () {
   map.getCanvas().style.cursor = 'pointer';
 });
 
 // Change it back to a pointer when it leaves.
-map.on('mouseleave', 'Ski Areas', function () {
+map.on('mouseleave', 'Ghost Towns', function () {
   map.getCanvas().style.cursor = '';
 });
 
@@ -93,7 +93,7 @@ map.on('mouseleave', 'Ski Areas', function () {
 // When a click event occurs on a feature in the index layers, open a popup at the
 // location of the click, with description HTML from its properties.
 //**********************************************
-map.on('click', 'Ski Areas', function (e) {
+map.on('click', 'Ghost Towns', function (e) {
 
   new mapboxgl.Popup()
   .setLngLat(e.lngLat)
