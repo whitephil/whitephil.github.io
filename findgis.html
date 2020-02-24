@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Finding GIS Data</title>
+
+		<meta name="description" content="Geospatial Data Finding Workshop">
+    <meta name="presenter:" content="Phil White">
+		<meta name="reveal.js by" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/workshopstyle.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1 style="text-align: left; ">Finding GIS Data</h1><br>
+            <div style="text-align: right;">
+              <p><strong>Phil White</strong></p>
+              <p>Earth Sciences & Environment Librarian</p>
+              <p><a href = "https://outpw.github.io/findgis#/">outpw.github.io/findgis</a></p>
+            </div>
+        </section>
+
+        <section>
+          <h2  style="text-align: left; ">Agenda</h2>
+            <ol>
+              <li style="text-align: left; ">Overview of GIS data types</li>
+              <li style="text-align: left; ">Go to sources</li>
+                <ul>
+                  <li style="text-align: left;"><a href = "https://libguides.colorado.edu/geospatialdata">libguides.colorado.edu/geospatialdata</a></li>
+                </ul>
+              <li style="text-align: left; ">Discussion & workshop time</li>
+            </ol>
+        </section>
+
+        <section>
+          <h2>5 Things:</h2>
+            <div class="fragment">
+              <p>Points</p>
+              <p>Lines</p>
+              <p>Polygons</p>
+              <p>Cells</p>
+            </div>
+            <p class="fragment">...& their Associated Attributes</p>
+        </section>
+
+        <section>
+          <div class="fragment">
+            <h3>Vector Data</h3>
+              <p>Points, Lines, Polygons</p><br>
+          </div>
+          <div class="fragment">
+            <h3>Raster Data</h3>
+              <p>Cells or Pixels</p><br>
+          </div>
+          <h2 class="fragment">All have attributes</h2>
+        </section>
+
+        <section>
+            <p>Vector:<br>
+              <img src ="img/vector.png" alt="vector example" height="225" width="225"></p>
+            <p>Raster:<br>
+              <img src ="img/raster.png" alt="raster example" height="225" width="225"></p>
+        </section>
+
+        <section>
+            <h3 style= "text-align: left;">Vector Data Formats</h3>
+              <div class="fragment">
+                <li style= "text-align: left;"><a href="http://wiki.gis.com/wiki/index.php/Shapefile" target="_blank">Shapefile</a> (.shp) <em>open</em></li>
+                  <ul>
+                    <li style= "text-align: left;"><em>Pro Tip: a shapefile is more than one file!</em></li>
+                  </ul>
+                <li style= "text-align: left;"><a href="http://wiki.gis.com/wiki/index.php/Geodatabase" target="_blank">GeoDatabase</a> (.gdb) <em>proprietary</em></li>
+                <li style= "text-align: left;"><a href="https://geojson.org/" target="_blank">GeoJson</a> (.geojson) <em>open, good for web</em></li>
+                <li style= "text-align: left;"><a href="http://wiki.gis.com/wiki/index.php/Keyhole_Markup_Language" target="_blank">KML/KMZ</a> (.kml/kmz) <em>open, Google vector format</em></li>
+                <li style= "text-align: left;"><a href="https://www.geopackage.org/" target="_blank">GeoPackage</a> (.gpkg) <em>open</em></li>
+              </div>
+        </section>
+
+        <section>
+            <h3 style= "text-align: left;">Raster Data Formats</h3>
+              <div class="fragment">
+                <li style= "text-align: left;"><a href="http://wiki.gis.com/wiki/index.php/GeoTIFF" target="_blank">GeoTIFF</a> (.tif) <em>open</em></li>
+                <li style= "text-align: left;"><a href="http://wiki.gis.com/wiki/index.php/ESRI_grid" target="_blank">Esri grid </a><em>proprietary</em></li>
+                <li style= "text-align: left;"><a href="http://wiki.gis.com/wiki/index.php/ASCII" target="_blank">ASCII</a> (.asc) <em>open, but not easy</em></li>
+                <li style= "text-align: left;"><a href="https://sedac.uservoice.com/knowledgebase/articles/41626-what-is-a-bil-image-file-format" target="_blank">BIL</a> (.bil) <em>open</em></li>
+                <li style= "text-align: left;"><a href="https://www.unidata.ucar.edu/software/netcdf/" target="_blank">NetCDF</a> (.nc) <em>open, usually climate data</em></li>
+                <li style= "text-align: left;"><em>Many more!</em></li>
+              </div>
+        </section>
+
+        <section>
+          <h2>Let's look at some data in QGIS</h2>
+        </section>
+
+        <section>
+          <h3 style="text-align: left;">Finding Data</h3><br><br>
+          <h2 class="fragment"> Ask yourself: "Who Cares?"</h2>
+        </section>
+
+        <section>
+          <h3 style="text-align: left;">Who cares about...</h3>
+            <li style= "text-align: left;" class="fragment">Population information?</li>
+            <li style= "text-align: left;" class="fragment">Water?</li>
+            <li style= "text-align: left;" class="fragment">Economic data?</li>
+            <li style= "text-align: left;" class="fragment">Satellite imagery?</li>
+            <li style= "text-align: left;" class="fragment">Marijuana dispenseries in Colorado?</li>
+        </section>
+
+        <section>
+          <h2><a href="https://libguides.colorado.edu/geospatialdata" target="_blank">Let's go find some data!</a></h2>
+        </section>
+
+        <section>
+          <div style="text-align: left;">
+            <h3>Wrap up</h3>
+              <li><a href="https://libguides.colorado.edu/gis" target="_blank">GIS Library Guide</a></li>
+              <li><a href="https://libguides.colorado.edu/geospatialdata" target="_blank">Geospatial Data Guide</a></li>
+              <li>Email: <a href="mailto:philip.white@colorado.edu">philip.white@colorado.edu</a></li>
+              <li>Make an appointment: <a href="https://bit.ly/phil-appt" target="_blank">bit.ly/phil-appt</a></li>
+        </section>
+
+        <script src="lib/js/head.min.js"></script>
+    		<script src="js/reveal.js"></script>
+
+    		<script>
+
+    			// More info https://github.com/hakimel/reveal.js#configuration
+    			Reveal.initialize({
+    				controls: true,
+    				progress: true,
+    				history: true,
+    				center: true,
+
+    				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    				// More info https://github.com/hakimel/reveal.js#dependencies
+    				dependencies: [
+    					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    					{ src: 'plugin/zoom-js/zoom.js', async: true },
+    					{ src: 'plugin/notes/notes.js', async: true }
+    				]
+    			});
+
+    		</script>
+      </div>
+    </div>
+  </body>
+</html>
