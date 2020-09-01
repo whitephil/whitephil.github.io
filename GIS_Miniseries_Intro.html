@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GUI-Free GIS Instruction in the Library with Jupyter Notebooks</title>
+
+		<meta name="Title" content"Clearly I wasn't feeling creative that day">
+		<meta name="Arthor" content "Phil White">
+
+		<meta name="reveajs" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="reavealjs author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/mini.css" id="theme">
+
+		<!-- emoji style -->
+		<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+
+		#cite {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			font-size: 15px;
+		}
+
+		#left_slide {
+			text-align: left;
+		}
+
+		.float-container {
+    	padding: 20px;
+			}
+
+		.float-child {
+		    width: 50%;
+		    float: left;
+			}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <p style="text-align: left; ">CRDDS Method of the Month</p>
+					<h2 style="text-align: left;">GIS: Basics</h2><br>
+            <div style="text-align: right;">
+              <p><strong>Phil White</strong></p>
+              <p>Earth, Environment & Geospatial Librarian</p>
+              <p><a href = "https://outpw.github.io/AAG2020#/">outpw.github.io/AAG2020</a></p>
+            </div>
+        </section>
+
+        <section>
+          <div id="left_slide">
+            <h3>MOTM GIS Miniseries:</h3><br>
+            <ol>
+              <li><a href ="https://colorado.libcal.com/event/6981011" target="_blank">Sept 8: GIS Overview </a><i <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i></li>
+							<li><a href = "https://colorado.libcal.com/event/6981694" target="_blank">Sept 15: Tools for Geospatial Analysis </a><i class="em em-hammer_and_wrench" aria-role="presentation" aria-label=""></i></li>
+							<li><a href = "https://colorado.libcal.com/event/6982193" target="_blank">Sept 22: Finding Geospatial Data </a><i class="em em-female-detective" aria-role="presentation" aria-label=""></i></li>
+							<li><a href = "https://colorado.libcal.com/event/6982211" target="_blank">Sept 29: Map Design </a><i class="em em-world_map" aria-role="presentation" aria-label=""></i></li>
+            </ol>
+						<p class='fragment'>All mini-workshops Tuesdays 12:00 to 12:30 pm</p>
+          </div>
+        </section>
+
+				<section>
+					<div id="left_slide">
+						<h3>In-Depth Workshops:</h3><br>
+						<ol>
+							<li><a href ="https://colorado.libcal.com/event/6981011" target="_blank">Oct 13: GIS in Python with GeoPandas </a><i class="em em-snake" aria-role="presentation" aria-label="SNAKE"></i> <i class="em em-panda_face" aria-role="presentation" aria-label="PANDA FACE"></i></li>
+							<li><a href = "https://colorado.libcal.com/event/6981694" target="_blank">Oct 27: QGIS </a><i class="em em-sunglasses" aria-role="presentation" aria-label="SMILING FACE WITH SUNGLASSES"></i> <i class="em em-free" aria-role="presentation" aria-label="SQUARED FREE"></i></li>
+							<li><a href = "https://colorado.libcal.com/event/6982193" target="_blank">Nov 10: ArcGIS </a><i class="em em-gorilla" aria-role="presentation" aria-label="GORILLA"></i></li>
+						</ol>
+						<p class='fragment'>Tuesdays 12:00 to 2:00 pm</p>
+						<p class='fragment'><a href = "https://colorado.libcal.com/event/6982211" target="_blank">Nov 13: GIS Day </a><i class="em em-tada" aria-role="presentation" aria-label="PARTY POPPER"></i></p>
+					</div>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Outline</h3><br>
+						<ol>
+							<li>What is "GIS"?</li>
+							<li>What is "Geospatial Data"?</li>
+							<li>Core Concepts</li>
+							<li>Common Techniques</li>
+						</ol>
+					</div>
+				</section>
+
+
+        <section data-background-color="#79CDCD	">
+					<h1>What is GIS?</h2>
+        </section>
+
+				<section>
+					<h3>We're surrounded by GIS</h3>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>GIS:</h3><p>(Geographic Information System) An integrated collection of computer software and data used to view and manage information about geographic places, analyze spatial relationships, and model spatial processes.</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>John Snow & Cholera: The classic GIS example</h3>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>John Snow & Cholera:</h3>
+						<ul>
+							<li class='fragment'>John Snow: physician, anesthesiologist, founder of modern epidemiology</li>
+							<li class='fragment'>London cholera outbreak of 1854</li>
+							<li class='fragment'>Analyzed patterns of the outbreak to locate epicenter</li>
+							<li class='fragment'>Discovered well at epicenter; removed well handle, outbreak stops</li>
+					</div>
+				</section>
+
+				<section data-background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Snow-cholera-map-1.jpg/1092px-Snow-cholera-map-1.jpg">
+					<div id="cite">
+						<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Snow-cholera-map-1.jpg/1092px-Snow-cholera-map-1.jpg" target="_blank">Wikimedia</a>
+					</div>
+				</section>
+
+				<section>
+					<h3>But not just any old data... <span class='fragment'>Geospatial Data!</span><h3>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>5 Things:</h3>
+						<div style="text-indent: 50px;">
+							<ol>
+								<li class='fragment'>Points</li>
+								<li class='fragment'>Lines</li>
+								<li class='fragment'>Polygons</li>
+								<li class='fragment'>Pixels</li>
+								<li class='fragment'>And their associated attributes</li>
+							</ol>
+						</div>
+				</section>
+
+				<section>
+					<h2>Vector Data</h2>
+						<p class='fragment'>Points, lines, polygons</p><br><br>
+					<h2 class='fragment'>Raster Data</h2>
+						<p class='fragment'>Pixels/Cells</p>
+				</section>
+
+				<section>
+					<div class="float-container">
+					  <div class="float-child">
+					    <figure><img src="img/vector.png"><figcaption>Vector Data</figcaption></figure><figure>
+					  </div>
+						<div class="float-child">
+    					<figure><img src='img/raster.png'><figcaption>Raster Data</figcaption></figure>
+  					</div>
+  				</div>
+				</section>
+
+				<section>
+					<h3 id="left_slide">Raster Data: Satellite Imagery</h3>
+					<img src='img/raster2.png'>
+					<div id="cite">
+						<a href="https://mapschool.io/" target="_blank">mapschool.io</a>
+					</div>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+						<h2>Raster Formats:</h2>
+						<div style='text-indent: 20px'>
+							<ol>
+								<li>Usually GeoTiff</li>
+								<li>Also ArcGRID, jpeg2000, others</li>
+							</ol>
+						</div>
+				</section>
+
+				<section>
+					<h2 id="left_slide">Vector Data</h2>
+					<img src='img/vector_types.png'>
+					<div id="cite">
+						<a href="https://mapschool.io/" target="_blank">mapschool.io</a>
+					</div>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+						<h2>Vector Formats:</h2>
+						<div style='text-indent: 20px'>
+							<ol>
+								<li>Most often: Shapefile (.shp)</li>
+								<li>kml/kmz</li>
+								<li>GeoJson</li>
+							</ol>
+						</div>
+				</section>
+
+				<section>
+					<h4>Formats: Bonus!</h4>
+					<h3>Spatially enabled databases</h3>
+					<p class='fragment'>(Can store both vector & raster data)</p><br>
+					<ol>
+						<li class='fragment'>Geodatabase (.gdb) [proprietary]</li>
+						<li class='fragment'>GeoPackage (.gpkg) [open source]</li>
+					</ol>
+				</section>
+
+
+
+				<section>
+					<section data-background="img/Pro_GUI.png" data-background-size="1000px 600px">
+						<h3>What's wrong with the GUI?</h3>
+					</section>
+
+          <section>
+            <p>Nothing.</p>
+            <p class="fragment"> but...</p>
+          </section>
+
+          <section>
+            <div style="text-align: left;">
+              <h4>Breaking Out of the Box is Good!</h4>
+              <ul>
+								<li class="fragment">The strengh of desktop GIS is also its weakness</li><br>
+                <li class="fragment">Disconnect between GIS concepts & GIS button pushing</li><br>
+							</ul>
+						</div>
+						<img class="fragment" src="img/missingdata.png" alt="missing data" height="300">
+					</section>
+
+					<section>
+						<div style="text-align: left;">
+							<h4>Benefits of Coding</h4>
+								<ul>
+	                <li class="fragment">More reproducible</li><br>
+									<li class="fragment">Forces a stronger grasp of spatial concepts & computer literacy</li><br>
+	                <li class="fragment">Creative problem solving<span class="fragment">/aka: coding is fun!<i class="em em-raised_hands" aria-role="presentation" aria-label="PERSON RAISING BOTH HANDS IN CELEBRATION"></i></span></li>
+	              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3>Oh, and by the way...</h3>
+          </section>
+
+          <section>
+            <div style= "width: 100%; height: 100%; top: 100px">
+              <p>"Data Science" is having a moment... <i class="em em-chart_with_upwards_trend" aria-role="presentation" aria-label="CHART WITH UPWARDS TREND"></i></p>
+              <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC02/embed_loader.js"></script>
+              <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"data science","geo":"US","time":"2004-01-01 2020-03-26"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=data%20science","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+            </div>
+          </section>
+
+          <section>
+            <div style= "width: 100%; height: 100%; top: 100px">
+              <p>Python as well... <i class="em em-chart_with_upwards_trend" aria-role="presentation" aria-label="CHART WITH UPWARDS TREND"></i></p>
+              <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC02/embed_loader.js"></script>
+              <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/05z1_","geo":"US","time":"2004-01-01 2020-03-26"},{"keyword":"/m/0212jm","geo":"US","time":"2004-01-01 2020-03-26"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=%2Fm%2F05z1_,%2Fm%2F0212jm","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+          </div>
+          </section>
+
+          <section>
+              <h3>The Library's Role</h3>
+              <p class="fragment">Libraries may be the only option on campus for learning about alternative approaches to GIS</p><br>
+              <p class="fragment">There are great, <em>free and open</em> Python-based GIS tools available</p><br>
+              <p class="fragment">Coding can improve data, computer, and spatial literacy</p>
+          </section>
+
+          <section>
+            <h3>Yes, coding is hard...<span class="fragment">but:</h3><br>
+            <h3 class="fragment">We have an opportunity to bridge a gap and push our students to new heights!<i class="em em-rocket" aria-role="presentation" aria-label="ROCKET"></i></h3>
+          </section>
+        </section>
+
+        <section>
+
+          <section>
+            <i class="em em-snake" aria-role="presentation" aria-label="NOTEBOOK WITH DECORATIVE COVER"></i> + <i class="em em-notebook_with_decorative_cover" aria-role="presentation" aria-label="NOTEBOOK WITH DECORATIVE COVER"></i> + <i class="em em-cloud" aria-role="presentation" aria-label="CLOUD"></i>
+          </section>
+
+          <section data-background-video="img/jupyterLoop.mp4">
+						<div style= "position: fixed; width: 100%; height: 100%; top: 20px">
+							<h3>Notebooks Rule</h3>
+						</div>
+          </section>
+
+          <section>
+            <div style="text-align:left;">
+              <h3>Jupyter Notebooks<i class="em em-notebook_with_decorative_cover" aria-role="presentation" aria-label="NOTEBOOK WITH DECORATIVE COVER"></i></h3><br>
+              <ul>
+                <li class="fragment">Document that combines executable code, visualizations, and annotations</li><br>
+                <li class="fragment">Made for Python, but can also run R</li><br>
+                <li class="fragment">Executing code in small chunks makes debugging easier <span class="fragment">(aka: great for beginners)</span></li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <div style="text-align:left;">
+              <h3>Jupyter Notebooks<i class="em em-notebook_with_decorative_cover" aria-role="presentation" aria-label="NOTEBOOK WITH DECORATIVE COVER"></i></h3><br>
+              <ul>
+                <li class="fragment">Also great for teaching!</li><br>
+                <li class="fragment"><a href= "https://github.com/outpw/geopandas_notebooks/blob/master/1.%20Importing%20Data%2C%20Plotting%2C%20and%20changing%20CRS.ipynb" target="_blank">Example notebook from GeoPandas workshop</a></li><br>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3>But wait... </h3>
+            <h4 class="fragment">I don't want to spend the whole class period doing tech support on everyones' laptops</h4>
+          </section>
+
+          <section data-background="img/clouds.jpg" data-background-size="100%">
+            <h3> <i class="em em-cloud" aria-role="presentation" aria-label="CLOUD"></i><em>JupyterHub</em> <i class="em em-cloud" aria-role="presentation" aria-label="CLOUD"></i></h3><br><br>
+            <p style="font-family:monospace;">[Insert Heavenly Sound Effect]</p>
+          </section>
+
+					<section>
+						<div style='text-align:left;'>
+							<h3>What is JupyterHub?</h3>
+							<ul>
+								<li class="fragment">A cloud-based environment for running Jupyter Notebooks</li><br>
+								<li class="fragment">Essentially one cloud computer that all class participants use <i class="em em-cloud" aria-role="presentation" aria-label="CLOUD"></i></li><br>
+								<li class="fragment">This means minimal (if any) technical hiccups</li><br>
+								<li class="fragment">Because web-based, equal access for any user no matter OS or device <span class="fragment">(Yay Equity!)<span></li>
+							</ul>
+						</div>
+					</section>
+
+					<section>
+						<h3>Set up is pretty easy</h3>
+					</section>
+
+					<section data-background='img/hubStack.svg' data-background-size="50%">
+					</section>
+
+					<section>
+						<h3><a href ="https://outpw.github.io/tutorials/JupyterHubSetup" target="_blank">My instructions for setting up JupyterHub based workshops</a></h3>
+					</section>
+
+        </section>
+				<section>
+					<div style='text-align:left;'>
+						<h3><i class="em em-thought_balloon" aria-role="presentation" aria-label="THOUGHT BALLOON"></i>Parting Thoughts<i class="em em-thought_balloon" aria-role="presentation" aria-label="THOUGHT BALLOON"></i></h3><br>
+							<ul>
+								<li class="fragment">Libraries have a vital role to play in facilitating open, reproducible scholarship</li><br>
+								<li class="fragment">This increasingly means code-based methods in open source languages</li><br>
+								<li class="fragment">Geography and GIS Librarians have a great opportunity to bridge the gap between conventional GIS and data-science approaches</li><br>
+							</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Learning has never been easier!<i class="em em-rocket" aria-role="presentation" aria-label="ROCKET"></i></h2>
+					<p class="fragment"><a href="https://doi.org/10.1080/15420353.2019.1660754" target="_blank">White & Powell 2019, <em>JMGL</em></a></p>
+				</section>
+
+				<section>
+					<div style='text-align:left;'>
+						<h3>Thank you <i class="em em-100" aria-role="presentation" aria-label="HUNDRED POINTS SYMBOL"></i></h3>
+						<p>Links:</p>
+						<ul>
+							<li><a href="https://jupyter4edu.github.io/jupyter-edu-book/" target="_blank">Teaching and Learning with Jupyter</a></li>
+							<li><a href="http://tljh.jupyter.org/en/latest/" target="_blank">(The Littlest) JupyterHub</a></li>
+							<li><a href="https://outpw.github.io/tutorials/JupyterHubSetup.html" target="_blank">Phil's JupyterHub Instructions</a></li>
+						</ul>
+						<p>Contact:</p>
+						<ul>
+							<li><a href="mailto:philip.white@colorado.edu" target="_blank">philip.white@colorado.edu</a></li>
+							<li><a href="https://outpw.github.io/" target="_blank">outpw.github.io</a></li>
+							<li><a href="https://github.com/outpw" target="_blank">github.com/outpw</a></li>
+						</ul>
+				</section>
+
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+  </body>
