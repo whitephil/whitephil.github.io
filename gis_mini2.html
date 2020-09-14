@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GIS Mini Workshop 1</title>
+
+		<meta name="Title" content"Clearly I wasn't feeling creative that day">
+		<meta name="Author" content "Phil White">
+
+		<meta name="reveajs" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="reavealjs author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/mini.css" id="theme">
+
+		<!-- emoji style -->
+		<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+
+		#slide_head {
+			position: fixed;
+			top: 30px;
+			left: 0px;
+			font-size: 30px;
+			text-align: left;
+		}
+
+		#cite {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			font-size: 15px;
+		}
+
+		#left_slide {
+			text-align: left;
+		}
+
+		.float-container {
+    	padding: 20px;
+			}
+
+		.float-child {
+		    width: 50%;
+		    float: left;
+			}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <div id=slide_head>CRDDS Method of the Month</div>
+					<h2 style="text-align: left;">GIS: Your Geospatial Toolbelt</h2><br>
+            <div style="text-align: right;">
+              <p><strong>Phil White</strong></p>
+              <p style='font-size: 30px'>Earth, Environment & Geospatial Librarian</p>
+              <p style='font-size: 30px'><a href = "https://outpw.github.io/gis_mini2">outpw.github.io/gis_mini2</a></p>
+            </div>
+        </section>
+
+        <section>
+          <div id="left_slide">
+            <h3>MOTM GIS Miniseries:</h3><br>
+						<div style='text-indent: 20px'>
+							<ol>
+	              <li><a href ="https://colorado.libcal.com/event/6981011" target="_blank"><del>Sept 8: GIS Introduction</del> </a><i <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i></li>
+								<li><a href = "https://colorado.libcal.com/event/6981694" target="_blank">Sept 15: Tools for Geospatial Analysis </a><i class="em em-hammer_and_wrench" aria-role="presentation" aria-label=""></i></li>
+								<li><a href = "https://colorado.libcal.com/event/6982193" target="_blank">Sept 22: Finding Geospatial Data </a><i class="em em-female-detective" aria-role="presentation" aria-label=""></i></li>
+								<li><a href = "https://colorado.libcal.com/event/6982211" target="_blank">Sept 29: Map Design </a><i class="em em-world_map" aria-role="presentation" aria-label=""></i></li>
+	            </ol>
+						</div>
+						<p class='fragment'>All mini-workshops Tuesdays 12:00 to 12:30 pm</p>
+          </div>
+        </section>
+
+				<section>
+					<div id="left_slide">
+						<h3>In-Depth Workshops:</h3><br>
+						<div style='text-indent: 20px'>
+
+							<ol>
+								<li><a href ="https://colorado.libcal.com/event/7089499" target="_blank">Oct 13: GIS in Python with GeoPandas </a><i class="em em-snake" aria-role="presentation" aria-label="SNAKE"></i> <i class="em em-panda_face" aria-role="presentation" aria-label="PANDA FACE"></i></li>
+								<li><a href = "https://colorado.libcal.com/event/7089576" target="_blank">Oct 27: QGIS </a><i class="em em-sunglasses" aria-role="presentation" aria-label="SMILING FACE WITH SUNGLASSES"></i> <i class="em em-free" aria-role="presentation" aria-label="SQUARED FREE"></i></li>
+								<li><a href = "https://colorado.libcal.com/event/7089704" target="_blank">Nov 10: ArcGIS </a><i class="em em-gorilla" aria-role="presentation" aria-label="GORILLA"></i></li>
+							</ol>
+						</div>
+						<p class='fragment'>Tuesdays 12:00 to 2:00 pm</p>
+						<p class='fragment'>Nov 13: GIS Day <i class="em em-tada" aria-role="presentation" aria-label="PARTY POPPER"></i></p>
+					</div>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Outline</h3><br>
+						<ul>
+							<li>Desktop GIS <i class="em em-desktop_computer" aria-role="presentation" aria-label=""></i></li>
+							<ul>
+								<li>ArcGIS (Online, Pro, Desktop)</li>
+								<li>QGIS</li>
+							</ul>
+							<li>Web GIS <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i></li>
+							<li>Programming Languages <i class="em em-keyboard" aria-role="presentation" aria-label=""></i></li><br>
+						</ul>
+						<h3 class='fragment' style='color:#ff8200'>Pros, Cons, & How to Choose!</h3>
+					</div>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h3>Have you used GIS before? What tools did you use and what was your experience?<br>Let me know in the chat <i class="em em-thinking_face" aria-role="presentation" aria-label="THINKING FACE"></i></h3>
+				</section>
+
+				<section data-background-color='#ff8200'>
+					<h2>Geospatial technology is constantly evolving! <i class="em em-infinity" aria-role="presentation" aria-label=""></i> <i class="em em-scream_cat" aria-role="presentation" aria-label="WEARY CAT FACE"></i></h2>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h3>Desktop GIS <i class="em em-desktop_computer" aria-role="presentation" aria-label=""></i></h3>
+				</section>
+
+				<section data-background-image='https://media.giphy.com/media/wEN6dJqNz1RxC/giphy.gif'>
+					<h2 class='fragment' style='color:white'>ArcGIS</h2>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>ArcGIS</h3>
+						<ul>
+							<li class='fragment'>Industry standard software by <a href='https://www.esri.com/en-us/homeEsri' target='_blank'>Esri</a></li>
+							<li class='fragment'>The undisputed champ</li>
+							<li class='fragment'><a href='https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview' target='_blank'>ArcGIS Pro</a>: the flagship desktop software</li>
+							<li class='fragment'><a href='https://desktop.arcgis.com/en/arcmap/' target='_blank'>ArcMap</a>: phasing out, but still popular</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Why should I choose ArcGIS?</h3>
+						<ul>
+							<li class='fragment'>You want to learn the industry standard</li>
+							<li class='fragment'>Excellent <a href='https://pro.arcgis.com/en/pro-app/tool-reference/main/arcgis-pro-tool-reference.htm' target='_blank'>documentation</a> and <a href='https://learn-arcgis-learngis.hub.arcgis.com/' target='_blank'>learning materials</a></li>
+							<li class='fragment'>End to end workflow; can probably meet all of your needs start to finish.</li>
+							<li class='fragment'>Free to CU Boulder affiliates!</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Why should I pass on ArcGIS?</h3>
+						<ul>
+							<li class='fragment'>Can be prohibitively expensive for individuals, depending on features</li>
+							<li class='fragment'>Windows only—doesn't work on Mac!! <i class="em em-interrobang" aria-role="presentation" aria-label="EXCLAMATION QUESTION MARK"></i></li>
+							<li class='fragment'>You're doing GIS for yourself—not a business or government</li>
+							<li class='fragment'>Esri likes to lock you into Arc in various ways...</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background-color="#3CB371">
+					<h2 style='color:#f9bb00'>QGIS</h2>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Why should I choose QGIS?</h3>
+						<ul>
+							<li class='fragment'>It's Free! <a href='https://qgis.org' target='_blank'>Go get it!</a></li>
+							<li class='fragment'>Also free-ing <i class="em em-rocket" aria-role="presentation" aria-label="ROCKET"></i></li>
+							<li class='fragment'>Fully featured. Equal to ArcGIS in terms of data manipulation, analysis</li>
+							<li class='fragment'><span style='font-style:italic'>FAST...</span> outperforms ArcGIS in most tasks</li>
+							<li class='fragment'><a href='https://qgis.org/en/docs/index.html' target='_blank'>Good docs and learning materials</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Why should I pass on QGIS?</h3>
+						<ul>
+							<li class='fragment'>You want a GIS tech job</li>
+							<li class='fragment'>ArcGIS peripherals more robust; especially web-integration</li>
+							<li class='fragment'>You want to do everything in one system</li>
+							<li class='fragment'>I can't think of any more... I love QGIS! <i class="em em-heart" aria-role="presentation" aria-label="HEAVY BLACK HEART"></i></li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background-color='#ff8200'>
+					<div id="left_slide">
+						<h3 style='color:white'>When should I use Desktop GIS?</h3>
+						<ul style='color:white'>
+							<li class='fragment'>When robust analysis or manipulation is needed</li>
+							<li class='fragment'>Any time you're working with "not small" data</li>
+							<li class='fragment'>You want more control over look and feel of your maps</li>
+							<li class='fragment'>Print (static) cartography</li>
+					</div>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h3>Web GIS <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i></h3>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>ArcGIS Online</h3>
+						<ul>
+							<li class='fragment'><a href='https://www.arcgis.com/home/index.html' target='_blank'>Public</a> version & <a href='https://ucboulder.maps.arcgis.com' target='_blank'>licensed</a> version</li>
+							<li class='fragment'>Probably most compreshensive web option</li>
+							<li class='fragment'>Numerous webapps included (<a href='https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/stories' target='_blank'>Story Maps</a>, <a href='https://www.esri.com/en-us/arcgis/products/arcgis-business-analyst/overview' target='_blank'>Business Analyst</a>)</li>
+							<li class='fragment'>"Lite" data analysis/manipulation</li>
+							<li class='fragment'><a href='https://oit.colorado.edu/software-hardware/software-downloads-and-licensing/arcgis-desktop/arcgis-online-request/webform' target='_blank'>Want an account?</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Not ArcGIS Online</h3>
+						<ul>
+							<li class='fragment'><a href='https://www.google.com/maps' target='_blank'>Google Maps</a> (I need a dot on a map)</li>
+							<li class='fragment'><a href='https://carto.com/' target='_blank'>Carto</a> (web map w/ my own layers; some data-manipulation; GUI-based)</li>
+							<li class='fragment'><a href='https://www.mapbox.com/' target='_blank'>Mapbox</a> (more developer-oriented; GUI & JavaScript, very customizable)</li>
+							<li class='fragment'><a href='https://leafletjs.com/' target='_blank'>Leaflet</a> (developer-oriented; JavaScript)</li>
+							<li class='fragment'><a href='https://developers.google.com/maps/documentation' target='_blank'>Google Maps API</a> (developer-oriented; JavaScript)</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h4>If you're not using ArcGIS Online, best to have some familiarity with web development<br>(HTML, CSS, JavaScript)</h4>
+				</section>
+
+				<section data-background-color='#ff8200'>
+					<div id="left_slide">
+						<h3 style='color:white'>When should I use Web GIS?</h3>
+						<ul style='color:white'>
+							<li class='fragment'>When sharing, communicating, and visualizing are priorities</li>
+							<li class='fragment'>Data is ready or requires little processing</li>
+							<li class='fragment'>End product is interactive</li>
+					</div>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h3>Code-based approaches <i class="em em-keyboard" aria-role="presentation" aria-label=""></i> <i class="em em-female-technologist" aria-role="presentation" aria-label=""></i></h3>
+				</section>
+
+				<section>
+					<div id="left_slide">
+						<h3>Coding GIS</h3>
+						<ul>
+							<li class='fragment'><a href='https://github.com/sacridini/Awesome-Geospatial#:~:text=ArcGIS%20%F0%9F%8C%9F%20%2D%20GIS%20for%20working,GUI%20and%202D%2F3D%20integration.&text=QGIS%20%F0%9F%8C%9F%20%2D%20Cross%2Dplatform%20free,GeoDa%20%2D%20Spatial%20data%20analysis%20software' target='_blank'>So many options</a>...</li>
+							<li class='fragment'>But <a href='https://medium.com/@chrieke/essential-geospatial-python-libraries-5d82fcc38731' target='_blank'>Python</a> & <a href='https://rspatial.org/' target='_blank'>R</a> are the biggies</li>
+							<li class='fragment'>Both are great and have well-developed, free geospatial packages</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background-color='#ff8200'>
+					<div id="left_slide">
+						<h3 style='color:white'>When should I use code to do GIS?</h3>
+						<ul style='color:white'>
+							<li class='fragment'>You like coding! <i class="em em-nerd_face" aria-role="presentation" aria-label="NERD FACE"></i></li>
+							<li class='fragment'>Open, reproducible research is your highest priority</li>
+							<li class='fragment'>Automate routine tasks <span class='fragment'>(though it should be noted that automation is possible in both Q & Arc)</span></li>
+							<li class='fragment'>BIG DATA</li>
+							<li class='fragment'>"Data Science" tidal wave <i class="em em-ocean" aria-role="presentation" aria-label="WATER WAVE"></i></li>
+					</div>
+				</section>
+
+				<section data-background-color='#ff8200'>
+					<h2 style='color:white'>Learn more about GIS data next week! <i class="em em-female-detective" aria-role="presentation" aria-label=""></i></h2>
+					<p style='color:white'>Finding GIS Data Sept 22</p>
+				</section>
+
+				<section>
+					<div id=left_slide>
+						<h3>GIS Resources:</h3>
+						<ul>
+							<li><a href='https://libguides.colorado.edu/gis' target='_blank'>GIS Library Guide</a></li>
+							<li><a href='https://maps.ucboulder.argis.com' target='_blank'>ArcGIS Online</a></li>
+							<li><a href='https://oit.colorado.edu/software-hardware/site-licenses/arcgis-desktop' target='_blank'>Esri software via CU site license</a></li>
+							<li><a href='https://www.esri.com/training/catalog/search/' target='_blank'>Esri Training Catalog</a></li>
+							<li><a href='https://www.colorado.edu/crdds' target='_blank'>Center for Research Data and Digital Scholarship</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+				<div style='text-align:left;'>
+						<h3>Thank you <i class="em em-100" aria-role="presentation" aria-label="HUNDRED POINTS SYMBOL"></i></h3>
+						<p>Upcoming:</p>
+						<ul>
+							<li><a href = "https://colorado.libcal.com/event/6982193" target="_blank">Sept 22: Finding Geospatial Data </a><i class="em em-female-detective" aria-role="presentation" aria-label=""></i></li>
+							<li><a href = "https://colorado.libcal.com/event/6982211" target="_blank">Sept 29: Map Design </a><i class="em em-world_map" aria-role="presentation" aria-label=""></i></li>
+						</ul>
+						<p>Contact:</p>
+						<ul>
+							<li>Email: <a href="mailto:philip.white@colorado.edu" target="_blank">philip.white@colorado.edu</a></li>
+							<li>Appointment: <a href="https://bit.ly/phil-appt" target="_blank">bit.ly/phil-appt</a></li>
+							<li>Tutorials: <a href="https://outpw.github.io/tutorials/GISmini" target="_blank">outpw.github.io/tutorials/GISmini</a></li>
+						</ul>
+				</section>
+
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+  </body>
