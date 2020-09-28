@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>GIS Mini Workshop 1</title>
+		<title>GIS Mini Workshop 4</title>
 
 		<meta name="Title" content"Clearly I wasn't feeling creative that day">
 		<meta name="Author" content "Phil White">
@@ -78,22 +78,22 @@
 
         <section>
           <div id=slide_head>CRDDS Method of the Month</div>
-					<h2 style="text-align: left;">GIS: Introduction</h2><br>
+					<h2 style="text-align: left;">GIS: Map Design <i class="em em-world_map" aria-role="presentation" aria-label=""></i></h2><br>
             <div style="text-align: right;">
               <p><strong>Phil White</strong></p>
               <p style='font-size: 30px'>Earth, Environment & Geospatial Librarian</p>
-              <p style='font-size: 30px'><a href = "https://outpw.github.io/GIS_Mini1">outpw.github.io/GIS_Mini1</a></p>
+              <p style='font-size: 30px'><a href = "https://outpw.github.io/gis_mini4">outpw.github.io/gis_mini4</a></p>
             </div>
         </section>
 
-        <section>
+				<section>
           <div id="left_slide">
             <h3>MOTM GIS Miniseries:</h3><br>
 						<div style='text-indent: 20px'>
 							<ol>
-	              <li><a href ="https://colorado.libcal.com/event/6981011" target="_blank">Sept 8: GIS Introduction </a><i <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i></li>
-								<li><a href = "https://colorado.libcal.com/event/6981694" target="_blank">Sept 15: Tools for Geospatial Analysis </a><i class="em em-hammer_and_wrench" aria-role="presentation" aria-label=""></i></li>
-								<li><a href = "https://colorado.libcal.com/event/6982193" target="_blank">Sept 22: Finding Geospatial Data </a><i class="em em-female-detective" aria-role="presentation" aria-label=""></i></li>
+	              <li><a href ="https://colorado.libcal.com/event/6981011" target="_blank"><del>Sept 8: GIS Introduction</del> </a><i <i class="em em-globe_with_meridians" aria-role="presentation" aria-label="GLOBE WITH MERIDIANS"></i></li>
+								<li><a href = "https://colorado.libcal.com/event/6981694" target="_blank"><del>Sept 15: Tools for Geospatial Analysis</del> </a><i class="em em-hammer_and_wrench" aria-role="presentation" aria-label=""></i></li>
+								<li><a href = "https://colorado.libcal.com/event/6982193" target="_blank"><del>Sept 22: Finding Geospatial Data</del> </a><i class="em em-female-detective" aria-role="presentation" aria-label=""></i></li>
 								<li><a href = "https://colorado.libcal.com/event/6982211" target="_blank">Sept 29: Map Design </a><i class="em em-world_map" aria-role="presentation" aria-label=""></i></li>
 	            </ol>
 						</div>
@@ -113,7 +113,7 @@
 							</ol>
 						</div>
 						<p class='fragment'>Tuesdays 12:00 to 2:00 pm</p>
-						<p class='fragment'><a href = "https://colorado.libcal.com/event/6982211" target="_blank">Nov 13: GIS Day </a><i class="em em-tada" aria-role="presentation" aria-label="PARTY POPPER"></i></p>
+						<p class='fragment'>Nov 13: GIS Day <i class="em em-tada" aria-role="presentation" aria-label="PARTY POPPER"></i></p>
 					</div>
 				</section>
 
@@ -121,135 +121,18 @@
 					<div id="left_slide">
 						<h3>Outline</h3><br>
 						<ol>
-							<li>What is "GIS"?</li>
-							<li>What is "Geospatial Data"?</li>
-							<li>Core Concepts</li>
-							<li>Common Techniques</li>
+							<li>Refresher on Datums/Projections</li>
+							<li>Style & Design considerations</li>
+							<li>Think about some maps!</li>
+							<li>What's next?</li>
 						</ol>
 					</div>
-				</section>
-
-
-        <section data-background-color="#79CDCD">
-					<h1>What is GIS?</h2>
-        </section>
-
-				<section>
-					<h3>We're surrounded by GIS</h3>
-				</section>
-
-				<section>
-					<div id="left_slide">
-						<h3>GIS:</h3><p>(Geographic Information System) An integrated collection of computer software and data used to view and manage information about geographic places, analyze spatial relationships, and model spatial processes.</p>
-					</div>
-				</section>
-
-				<section>
-					<h3>John Snow & Cholera: The classic GIS example</h3>
-				</section>
-
-				<section>
-					<div id="left_slide">
-						<h3>John Snow & Cholera:</h3>
-						<ul>
-							<li class='fragment'>John Snow: physician, anesthesiologist, founder of modern epidemiology</li>
-							<li class='fragment'>London cholera outbreak of 1854</li>
-							<li class='fragment'>Analyzed patterns of the outbreak to locate epicenter</li>
-							<li class='fragment'>Discovered well at epicenter; removed well handle, outbreak stops</li>
-					</div>
-				</section>
-
-				<section data-background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Snow-cholera-map-1.jpg/1092px-Snow-cholera-map-1.jpg">
-					<div id="cite">
-						<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Snow-cholera-map-1.jpg/1092px-Snow-cholera-map-1.jpg" target="_blank">Wikimedia</a>
-					</div>
-				</section>
-
-				<section data-background-color="#79CDCD">
-					<p>But not just any old data...</p>
-					<h2 class='fragment'>Geospatial Data!</h2>
-				</section>
-
-				<section>
-					<div id="left_slide">
-						<h3>5 Things:</h3>
-						<div style="text-indent: 50px">
-							<ol>
-								<li class='fragment'>Points</li>
-								<li class='fragment'>Lines</li>
-								<li class='fragment'>Polygons</li>
-								<li class='fragment'>Pixels/Cells</li>
-								<li class='fragment'>And their associated attributes</li>
-							</ol>
-						</div>
-				</section>
-
-				<section>
-					<p style='font-weight: bold; font-size: 30px'>Vector Data</p>
-						<img class= 'fragment' src='img/vector_types.png' height='200px'>
-					<p style='font-weight: bold; font-size: 30px' class='fragment'>Raster Data</p>
-						<img class='fragment' src='img/raster2.png' height='250px'>
-					<div id="cite">
-						<a href="https://mapschool.io/" target="_blank">mapschool.io</a>
-					</div>
-				</section>
-
-				<section>
-					<div class="float-container">
-					  <div class="float-child">
-					    <figure><img src="img/vector.png"><figcaption>Vector Data</figcaption></figure><figure>
-					  </div>
-						<div class="float-child">
-    					<figure><img src='img/raster.png'><figcaption>Raster Data</figcaption></figure>
-  					</div>
-  				</div>
-				</section>
-
-				<section data-background-image='img/flatironsDEM.jpg'>
-
-					<div class="float-container">
-					  <div style='text-align:left; color:#EE00EE' class="float-child">
-							<span class='fragment'>
-								<span class="fragment fade-out">And their attributes...</span>
-							</span>
-							<span class='fragment'>
-								<span class="fragment fade-out">Cells have values, aka <span style='font-style:italic'>attributes</span></span>
-							</span>
-					  </div>
-						<div style='color:#FFC0CB' id='left_slide' class="float-child">
-							<p class='fragment'>Digital Elevation Model <br>(DEM)</p><br>
-							<ul>
-								<li class='fragment'>White Cell = 2402.89m</li><br>
-								<li class='fragment'>Black Cell = 1735.06m</li>
-							<ul>
-  					</div>
-  				</div>
-				</section>
-
-				<section data-background-image='img/polygons.jpg'>
-					<img class='fragment' src='img/attributes.jpg'>
-				</section>
-
-				<section data-background-color='#ff8200'>
-					<h2 style='color:white'>More on data in 2 weeks!</h2>
-					<h3 style='color:white'>Finding GIS Data Sept 22</h3>
 				</section>
 
 <!-- Mapping stuff -->
 
 				<section data-background-color="#79CDCD">
-					<h3>But... putting stuff on a map is more compicated than it seems...</h3>
-				</section>
-
-				<section data-background-color="#79CDCD">
-					<div id="left_slide">
-						<h3>2 Things:</h3>
-						<div style="text-indent: 50px">
-							<ol>
-								<li>Datums</li><br>
-								<li>Projections</li>
-							</ol>
-						</div>
+					<h3>REVIEW... putting stuff on a map is more compicated than it seems...</h3>
 				</section>
 
 				<section data-background-image='img/earth-shapes.jpg'>
@@ -258,50 +141,9 @@
 					</div>
 				</section>
 
-				<section>
-					<h4>Because Earth's shape is irregular and changing, assigning locations is imperfect.</h4><br>
-					<h4 class='fragment'>We use imaginary reference systems to approximate.</h4><br>
-					<h4 class='fragment'>We tend to call this a "datum."</h4>
-				</section>
-
-				<section>
-					<p>Common Datums: NAD83, WGS84</p><br>
-					<span class='fragment'>
-						<p>In GIS, we often use the terms</p>
-						<p style='font-weight:bold'>"Datum",</p>
-						<p style='font-weight:bold'>"Coordinate Reference System",</p>
-						<p>and</p>
-						<p style='font-weight:bold'>"Geographic Coordinate System"</p>
-						<p>interchangeably.</p>
-					</span>
-				</section>
-
-				<section>
-					<p>GIS data usually has a coordinate system built right in.</p><br>
-					<p class='fragment'>GIS software will read that information and place your data in the right location</p><br>
-					<p class='fragment' style='font-style:italic'>...Usually.</p>
-				</section>
-
-
-				<section>
-					<h3>You might consider the datum to be the "grid",<br> like latitude and longitude.</h3>
-					<img src = 'img/mercator.gif'>
-				</section>
-
 				<section data-background-image='img/projections.jpg'>
 					<div id='slide_head'>
 						<h2>Projection<span class='fragment'>, or how we warp the grid</span></h2>
-					</div>
-				</section>
-
-				<section>
-					<div id='left_slide'>
-						<h2>Projection</h2><br>
-						<div style='text-indent:20px'>
-							<li class='fragment'>Always a compromise</li>
-							<li class='fragment'>Shape, area, distance, direction</li>
-							<li class='fragment'>Can't have them all!</li>
-						</div>
 					</div>
 				</section>
 
@@ -311,11 +153,8 @@
 					</div>
 					<div class="float-container">
 						<div class="float-child">
-							<p style='color:blue; font-weight:bold' class='fragment'>Good for direction</p>
 						</div>
 						<div class="float-child">
-							<p style='color:red; font-weight:bold' class='fragment'>Bad for shape/size</p>
-							<p style='color:red; font-weight:bold' class='fragment'>(Hello Greenland!)</p>
 						</div>
 					</div>
 				</section>
@@ -325,61 +164,120 @@
 				</section>
 
 				<section>
-					<div id='slide_head'>
-						<h3>Scale</h3>
-					</div>
-					<div class="float-container">
-						<div class="float-child">
-							<p class='fragment'>Small Scale</p>
-							<img class='fragment' src='img/small_scale.jpg'>
+					<figure><img src='img/ElectionMap.png'><figcaption><a href='https://commons.wikimedia.org/wiki/File:2016_presidential_election,_results_by_congressional_district_(popular_vote_margin).svg' style='font-size:20px'>Wikimedia</a></figcaption></figure>
+				</section>
+
+				<section>
+					<figure><img src='img/Usgs_map_albers_equal_area_conic.png'><figcaption><a href='https://commons.wikimedia.org/wiki/File:Usgs_map_albers_equal_area_conic.PNG' style='font-size:20px'>Wikimedia</a></figcaption></figure>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+						<h2>Projection</h2><br>
+						<div style='text-indent:20px'>
+							<li class='fragment'>All projections have a purpose</li>
+							<li class='fragment'>Always a compromise</li>
+							<li class='fragment'>Shape, area, distance, direction</li>
+							<li class='fragment'>Can't have them all!</li>
 						</div>
-						<div class="float-child">
-							<p class='fragment'>Lage Scale</p>
-							<img class='fragment' src='img/large_scale.jpg'>
-						</div>
 					</div>
 				</section>
 
-				<section data-background-color='#ff8200'>
-					<h2 style='color:white'>Learn more about mapping stuff in 3 weeks!</h2>
-					<h3 style='color:white'>Map Design Sept 29</h3>
-				</section>
-
-				<section data-background-color='#79CDCD'>
-					<h1>What can I do with GIS?</h1>
+				<section data-background-color="#79CDCD">
+					<h2>Map Design</h2>
+					<h3 class='fragment'>(aka: Cartography)</h3>
+					<p class='fragment'>Both an Art and a Science!</p>
 				</section>
 
 				<section>
-					<h3>Take some data...</h3><br>
-					<h3 class='fragment'>Do some stuff...</h3><br>
-					<h3 class='fragment'>Communicate new info!</h3>
-				</section>
-
-
-
-				<section>
-
-				</section>
-
-				<section>
-
-				</section>
-
-
-				<section>
-					<div style='text-align:left;'>
-						<h3>Thank you <i class="em em-100" aria-role="presentation" aria-label="HUNDRED POINTS SYMBOL"></i></h3>
-						<p>Links:</p>
+					<div id='left_slide'>
+						<h3>Start Planning</h3>
 						<ul>
-							<li><a href="https://jupyter4edu.github.io/jupyter-edu-book/" target="_blank">Teaching and Learning with Jupyter</a></li>
-							<li><a href="http://tljh.jupyter.org/en/latest/" target="_blank">(The Littlest) JupyterHub</a></li>
-							<li><a href="https://outpw.github.io/tutorials/JupyterHubSetup.html" target="_blank">Phil's JupyterHub Instructions</a></li>
+							<li class='fragment'>What are you trying to communicate?</li>
+							<li class='fragment'>Assess your data</li>
+							<li class='fragment'>Prioritize the message</li>
+							<li class='fragment'>Simplify, simplify, simplify!</li>
+					</div>
+				</section>
+
+				<section>
+					<h3>Personal Example:</h3>
+					<p>Kwajailen & Marshall Islands</p>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+						<h3>Principles</h3>
+						<ol>
+							<li class='fragment'>Visual Contrast</li>
+							<li class='fragment'>Legibility</li>
+							<li class='fragment'>Figure-Ground Organization</li>
+							<li class='fragment'>Hierarchy</li>
+							<li class='fragment'>Compositional Balance</li>
+						</ol>
+					</div>
+					<p class='fragment'>Take a look at <a href='https://www.esri.com/news/arcuser/0112/files/design-principles.pdf' target='_blank'>Buckley, 2012</a></p>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h2>Where do I start?</h2>
+					<h3 class='fragment'>Start by looking at maps!</h3>
+				</section>
+
+				<section>
+					<a href= href='https://www.imusgeographics.com/page_294/map-of-the-usa' target='_blank'><img src=img/comparison.jpg></a>
+					<p style='font-size:small'><a href='https://www.imusgeographics.com/page_294/map-of-the-usa' target='_blank'>Imus Geographics</a></p>
+				</section>
+
+				<section>
+					<h3>COVID two ways:</h3><br>
+					<p><a href='https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html' target='_blank'>NY Times</a></p><br>
+					<p><a href='https://www.npr.org/sections/health-shots/2020/09/01/816707182/map-tracking-the-spread-of-the-coronavirus-in-the-u-s' target='_blank'>NPR</a></p>
+				</section>
+
+				<section>
+					<h3>A word on color...</h3>
+					<p class='fragment'><a href='https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3' target='_blank'>Color Brewer</a></p>
+				</section>
+
+				<section data-background-color="#79CDCD">
+					<h3>Wrap up! What's next?</h3>
+					<ul>
+						<li class='fragment'>Get some GIS Software!</li>
+						<ul class='fragment'>
+							<li><a href='https://www.qgis.org' target='_blank'>QGIS</a></li>
+							<li><a href='https://cuservices.colorado.edu/esri/download/' target='_blank'>ArcGIS</a></li>
+						</ul>
+						<li class='fragment'>Keep on learning!</li>
+				</section>
+
+				<section>
+					<div id=left_slide>
+						<h3>GIS Resources:</h3>
+						<ul>
+							<li><a href='https://libguides.colorado.edu/gis' target='_blank'>GIS Library Guide</a></li>
+							<li><a href='https://maps.ucboulder.argis.com' target='_blank'>ArcGIS Online</a></li>
+							<li><a href='https://oit.colorado.edu/software-hardware/site-licenses/arcgis-desktop' target='_blank'>Esri software via CU site license</a></li>
+							<li><a href='https://www.esri.com/training/catalog/search/' target='_blank'>Esri Training Catalog</a></li>
+							<li><a href='https://www.colorado.edu/crdds' target='_blank'>Center for Research Data and Digital Scholarship</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+				<div style='text-align:left;'>
+						<h3>Thank you <i class="em em-100" aria-role="presentation" aria-label="HUNDRED POINTS SYMBOL"></i></h3>
+						<p>Upcoming:</p>
+						<ul>
+							<li><a href="https://colorado.libcal.com/event/7089499" target="_blank">Oct 13: GeoPandas </a></a><i class="em em-snake" aria-role="presentation" aria-label="SNAKE"></i> <i class="em em-panda_face" aria-role="presentation" aria-label="PANDA FACE"></i></li>
+							<li><a href = "https://colorado.libcal.com/event/7089576" target="_blank">Oct 27: QGIS </a><i class="em em-sunglasses" aria-role="presentation" aria-label="SMILING FACE WITH SUNGLASSES"></i> <i class="em em-free" aria-role="presentation" aria-label="SQUARED FREE"></i></li>
+							<li><a href = "https://colorado.libcal.com/event/7089704" target="_blank">Nov 10: ArcGIS </a><i class="em em-gorilla" aria-role="presentation" aria-label="GORILLA"></i></li>
 						</ul>
 						<p>Contact:</p>
 						<ul>
-							<li><a href="mailto:philip.white@colorado.edu" target="_blank">philip.white@colorado.edu</a></li>
-							<li><a href="https://outpw.github.io/" target="_blank">outpw.github.io</a></li>
-							<li><a href="https://github.com/outpw" target="_blank">github.com/outpw</a></li>
+							<li>Email: <a href="mailto:philip.white@colorado.edu" target="_blank">philip.white@colorado.edu</a></li>
+							<li>Appointment: <a href="https://bit.ly/phil-appt" target="_blank">bit.ly/phil-appt</a></li>
+							<li>Tutorials: <a href="https://outpw.github.io/tutorials/GISmini" target="_blank">outpw.github.io/tutorials/GISmini</a></li>
 						</ul>
 				</section>
 
