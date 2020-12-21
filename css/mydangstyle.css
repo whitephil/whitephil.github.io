@@ -55,11 +55,13 @@ footer {
 
 a {
   color: #42affa;
+  text-decoration: none;
   transition: color .15s ease;
 }
 
 a:hover {
   color: #8dcffc;
+  text-decoration: none;
   text-shadow: none;
   border: none;
 }
