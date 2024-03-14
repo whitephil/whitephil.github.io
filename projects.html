@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>phil | articles</title>
+        <meta name="description" content="Phil's presentations">
+        <meta name="author" content="Phil White">
+
+        <link rel="stylesheet" href="css/mydangstyle.css?v=1.0">
+
+    </head>
+
+    <body>
+        <h1><a href='https://whitephil.github.io/' style='color:white'>Always Learning.</a></h1>
+        <p>Phil White. Earth, Environment & Geospatial Librarian, University of Colorado Boulder</p>
+        <h3>A selection of code examples of varying complexity developed for projects, teaching, and for fun.</h3>
+        <ul>
+            <h3>Mobile homes and parcels</h3>
+            <p>I'm currently working on a project with a colleague examining economic outcomes for 
+                mobile home park residents following sales of parks. My role is developing a <a href="https://github.com/whitephil/parcel-mhp/blob/main/parcelfunks.py" target="_blank">geospatial data pipeline</a> that 
+                processes parcel data for 3000+ US counties, Microsoft's US Building Footprints data, and Census Block geometries. 
+                My pipeline runs through several custom filtering mechanisms and uses building footprints to identify potential 
+                mobile home park parcels, which are then associated with both transacted mobile home parks point data and their associated Census Blocks.
+                As this analysis will include nearly every county in the entire lower 48 states, the process is parallelized to efficiently handle the several TBs of data. 
+                The data pipeline is complete, and I'm currently testing and preparing to run the code for the entire nation on CU's high-performance computing cluster, Alpine. 
+                Code for the processing pipeline is available on <a href="https://github.com/whitephil/parcel-mhp/blob/main/parcelfunks.py" target="_blank"> GitHub</a>.</p>
+            <h3>API call, XML and JSON parsing, MatPlotLib</h3>
+            <p>This was a project I worked on a few years back with colleagues from Berkely, UCLA, and the University of Houston, comparing how faculty use
+                materials in our collections based on their citation habits. This project involved downloading about 100k citations from Web of Science using their SOAP API 
+                (very nasty XML with unstructured citations), then parsing them with REGEX to get DOIs for each citation. These DOIs were then queried against the CrossRef REST API
+                (very nicely structured JSON), written to CSV, analyzed using Pandas, and finally creating some attractive plots using MatPlotLib. <a href="https://github.com/samteplitzky/Earth-Science-Citation-Replication-Project/blob/master/Citation_Data_Analysis_All_Institutions.ipynb" target="_blank">I wrote this notebook and code</a> 
+                for my colleagues each to run separately. It runs through the REGEX, CrossRef, Pandas, and MatPlotLib portions--the bulk of the project's methods.</p>
+            <h3>Web mapping</h3>
+            <p>Two examples. First, a <a href="https://whitephil.github.io/GIS-workshops/Web-mapping/Notebooks/Folium_Notebook.html" target="_blank">Notebook I developed for a webmapping workshop</a>. Starting from very basic webmapping using GeoPandas and Folium and advancing to
+                a choropleth map with a custom color ramp and style function.</p> 
+                <p>Next, a <a href="https://outpw.s3.us-east-2.amazonaws.com/COEC-nav.html" target="_blank">simple navigation web app</a> I created using MapBox GL JavaScript library for my spouse's workplace. Includes the ability to toggle between basemaps, and a trails layer styled according to 
+                their older paper map but with the ability to view attributes on click. This works in a desktop browser, but is ideally used on a mobile device on property with location turned on so you can see your 
+                location and orientation. <a href="https://github.com/whitephil/coec_map" target="_blank">Code here</a>.</p>
+            <h3>Music workflow</h3>
+            <p>I am a big collector of music in compact disc format. A while back I decided I wanted to take control of my collection, 
+                get it psuedo-cataloged, and back it up on cloud space that I manage. 
+                <a href="https://github.com/whitephil/justsomescripts/blob/master/musicWorkflow.py" target="_blank">This script</a> 
+                uses takes FLAC audio files in my collection, adds new items to my inventory, copies them to an external SSD, converts a copy to MP4 
+                (for adding to my phone), manages the audio files' metadata, and finally uploads FLAC files to an AWS S3 bucket for cloud backup. 
+                Uses pandas, pydub, boto3, and other libraries.</p>
+            <h3>A Rasterio workshop</h3>
+            <p>I developed this <a href="https://whitephil.github.io/GIS-workshops/Rasterio/Rasterio-workshop.html" target="_blank">workshop</a> primarily for GEOG 4303/5303 students to give them a taste of open source raster manipulations. In contrast to ArcPy, rasterio is more like
+                bowling without gutters. A lot of things are hidden under the hood in ArcPy need more explicit management when you use Rasterio (or GDAL). These notebooks run through
+                <a href="https://github.com/whitephil/rasterio_notebooks/blob/main/Completed_NBs/1.%20Rasterio%20Read%2C%20Write%2C%20Describe.ipynb" target="_blank">I/O operations</a>, 
+                <a href="https://github.com/whitephil/rasterio_notebooks/blob/main/Completed_NBs/2.%20Rasterio%20Clip%20Operations.ipynb" target="_blank">managing coordinate transformations</a>, 
+                <a href="https://github.com/whitephil/rasterio_notebooks/blob/main/Completed_NBs/3.%20Rasterio%20Reprojections.ipynb" target="_blank">clipping/masking</a>, 
+                <a href="https://github.com/whitephil/rasterio_notebooks/blob/main/Completed_NBs/4.%20Rasterio%20Visualizations.ipynb" target="_blank">visualizations</a>, and some 
+                <a href="https://github.com/whitephil/rasterio_notebooks/blob/main/Completed_NBs/5.%20Rasterio%20and%20Numpy.ipynb" target="_blank">basic analyses using Numpy and Scipy</a>. 
+                A plus side of Rasterio and most open source GIS options is that riding without the training wheels really teaches you more about the structure and management of geospatial information. 
+            </p>
+            <h3>A home made point buffer function</h3>
+            <p>This was just an afternoon curio/rabbit-hole dive prompted by a classroom question. 
+                You learn a lot about spatial data by deconstructing and reengineering a pretty standard operation. 
+                This uses ArcPy just for IO operations, but could easily be converted to work with SHAPELY geometries 
+                and applied to a geopandas frame. <a href="https://github.com/whitephil/justsomescripts/blob/master/philBuffer.py" target="_blank">Fun one</a>!</p>
+            </ul>
+    </body>
+
+    <footer><a href= "mailto:whitephilipb@gmail.com">email</a> <b>|</b> <a href='https://github.com/whitephil' target='_blank'>whitephil <img src='img/GitHub-Mark-custom.svg' style='width:15px; padding-top:10px; border:none !important;'></a></footer>
+</html>
