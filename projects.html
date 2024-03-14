@@ -27,11 +27,11 @@
                 The data pipeline is complete, and I'm currently testing and preparing to run the code for the entire nation on CU's high-performance computing cluster, Alpine. 
                 Code for the processing pipeline is available on <a href="https://github.com/whitephil/parcel-mhp/blob/main/parcelfunks.py" target="_blank"> GitHub</a>.</p>
             <h3>API call, XML and JSON parsing, MatPlotLib</h3>
-            <p>This was a project I worked on a few years back with colleagues from Berkely, UCLA, and the University of Houston, comparing how faculty use
+            <p>This was a project I worked on a few years back with collaborators from Berkely, UCLA, and the University of Houston, comparing how faculty use
                 materials in our collections based on their citation habits. This project involved downloading about 100k citations from Web of Science using their SOAP API 
                 (very nasty XML with unstructured citations), then parsing them with REGEX to get DOIs for each citation. These DOIs were then queried against the CrossRef REST API
                 (very nicely structured JSON), written to CSV, analyzed using Pandas, and finally creating some attractive plots using MatPlotLib. <a href="https://github.com/samteplitzky/Earth-Science-Citation-Replication-Project/blob/master/Citation_Data_Analysis_All_Institutions.ipynb" target="_blank">I wrote this notebook and code</a> 
-                for my colleagues each to run separately. It runs through the REGEX, CrossRef, Pandas, and MatPlotLib portions--the bulk of the project's methods.</p>
+                for my collaborators each to run separately. It runs through the REGEX, CrossRef, Pandas, and MatPlotLib portions--the bulk of the project's methods.</p>
             <h3>Web mapping</h3>
             <p>Two examples. First, a <a href="https://whitephil.github.io/GIS-workshops/Web-mapping/Notebooks/Folium_Notebook.html" target="_blank">Notebook I developed for a webmapping workshop</a>. Starting from very basic webmapping using GeoPandas and Folium and advancing to
                 a choropleth map with a custom color ramp and style function.</p> 
@@ -42,7 +42,7 @@
             <p>I am a big collector of music in compact disc format. A while back I decided I wanted to take control of my collection, 
                 get it psuedo-cataloged, and back it up on cloud space that I manage. 
                 <a href="https://github.com/whitephil/justsomescripts/blob/master/musicWorkflow.py" target="_blank">This script</a> 
-                uses takes FLAC audio files in my collection, adds new items to my inventory, copies them to an external SSD, converts a copy to MP4 
+                takes FLAC audio files in my collection, adds new items to my inventory, copies them to an external SSD, converts a copy to MP4 
                 (for adding to my phone), manages the audio files' metadata, and finally uploads FLAC files to an AWS S3 bucket for cloud backup. 
                 Uses pandas, pydub, boto3, and other libraries.</p>
             <h3>A Rasterio workshop</h3>
